@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function categoría() {
+            var edad = document.getElementById("edadId").value;
+            var edad = parseInt(edad);
+            if (edad>=12) {
+                alert("Cadete")
+            } else {
+                if (edad>=10) {
+                    alert("Infantil")
+                } else {
+                    if (edad>=8) {
+                        alert("Alevín")
+                    } else {
+                        if (edad>=6) {
+                            alert("Benjamín")
+                        } else {
+                            alert("Ninguna")
+                        }
+                    }
+                }
+                
+            }
+
+        }
+    </script>
+    Edad: <input type="text" id="edadId"> <br>
+    <input type="button" value="Ver categoría" onclick="categoría()">
+</body>
+</html>
