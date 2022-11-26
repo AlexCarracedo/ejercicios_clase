@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function ºF() {
+        var grados=document.getElementById("gradId").value;
+        var grados=parseInt(grados);
+        var res=((grados*1.8)+32);
+        alert("La temperatura es de "+res+" ºF");
+    }
+    function ºC() {
+        var grados_=document.getElementById("gradId").value;
+        var grados_=parseInt(grados_);
+        var res_=((grados_-32)/(1.8));
+        alert("La temperatura es de "+res_+" ºC");
+    }
+</script>
+<body>
+    Grados (Centígrados o Farenheit)=<input type="text" id="gradId"><br>
+    <input type="button" value="Cambiar grados a Celsius" onclick="ºC()"><br>
+    <input type="button" value="Cambiar grados a Farenheit" onclick="ºF()">
+</body>
+</html>
