@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function calc() {
+        var num=parseInt(document.getElementById("numId").value);
+        var sol=0;
+        document.write("<p> Los números primos que hay entre 1 y "+num+" son: </p>")
+        for (let x = 1; x <= num; x++) {
+            for (let a = 1; a <= x; a++) {
+                var res = x % a;
+                if (res==0) {
+                    sol=sol+1;
+                }
+            }
+            if (sol==2) {
+                document.write("<p>"+x+"</p>");
+            }
+            sol=0;
+        }
+
+    }
+</script>
+<body>
+    Números primos (entre 1 y el número elegido): <input type="number" id="numId"><br>
+    <input type="button" value="Calcular números primos entre 1 y el número elegido" onclick="calc()">
+</body>
+</html>
