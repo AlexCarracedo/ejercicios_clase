@@ -8,21 +8,31 @@
 </head>
 <script>
     function ºF() {
+        const div=document.getElementById("divId");
         var grados=document.getElementById("gradId").value;
         var grados=parseFloat(grados);
         var res=((grados*1.8)+32);
-        alert("La temperatura es de "+res+" ºF");
+        var res_ = Math.round(res*100)/100;
+        //document.getElementById("divId").write("<p>"+"Grados (Centígrados o Farenheit)=<input type='text' id='gradId'><br><input type='button' value='Cambiar grados a Celsius' onclick='ºC()''><br><input type='button' value='Cambiar grados a Farenheit' onclick='ºF()'>"+"</p>");
+        //document.getElementById("divId").innerHTML("<p>"+"La temperatura es de "+res_+" ºF"+"</p>");
+        div.innerHTML="<p>"+"La temperatura es de "+res_+" ºF"+"</p>";
+        //document.body.appendChild(div);
+
     }
     function ºC() {
+        const div=document.getElementById("divId");
         var grados_=document.getElementById("gradId").value;
         var grados_=parseFloat(grados_);
         var res_=((grados_-32)/(1.8));
-        alert("La temperatura es de "+res_+" ºC");
+        var res = Math.round(res_*100)/100;
+        //document.getElementById("divId").write("<p>"+"Grados (Centígrados o Farenheit)=<input type='text' id='gradId'><br><input type='button' value='Cambiar grados a Celsius' onclick='ºC()''><br><input type='button' value='Cambiar grados a Farenheit' onclick='ºF()'>"+"</p>");
+        div.innerHTML="<p>"+"La temperatura es de "+res+" ºF"+"</p>";
     }
 </script>
 <body>
     Grados (Centígrados o Farenheit)=<input type="text" id="gradId"><br>
     <input type="button" value="Cambiar grados a Celsius" onclick="ºC()"><br>
     <input type="button" value="Cambiar grados a Farenheit" onclick="ºF()">
+<div id="divId"></div>
 </body>
 </html>
