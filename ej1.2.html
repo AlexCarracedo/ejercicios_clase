@@ -9,13 +9,13 @@
 <script>
     function ºF() {
         var grados=document.getElementById("gradId").value;
-        var grados=parseInt(grados);
+        var grados=parseFloat(grados);
         var res=((grados*1.8)+32);
         alert("La temperatura es de "+res+" ºF");
     }
     function ºC() {
         var grados_=document.getElementById("gradId").value;
-        var grados_=parseInt(grados_);
+        var grados_=parseFloat(grados_);
         var res_=((grados_-32)/(1.8));
         alert("La temperatura es de "+res_+" ºC");
     }
