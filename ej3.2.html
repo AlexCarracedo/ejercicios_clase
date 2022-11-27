@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function multiples() {
+    var num=parseFloat(document.getElementById("numId").value);
+    if (0<=num && num<1) {
+        document.write("<p>"+num+" no tiene múltiplos entre 1 y él mismo porque está entre 1 y 0."+"</p>");
+    } else {
+        if (-1<num && num<0) {
+        document.write("<p>"+num+" no tiene múltiplos entre -1 y él mismo porque está entre -1 y 0."+"</p>");
+        } else {
+            if (-3<num && num<3) {
+                if (num>0) {
+                    document.write("<p>"+"No hay múltiplos de 3 entre 1 y "+num+"</p>");
+                } else {
+                    document.write("<p>"+"No hay múltiplos de 3 entre -1 y "+num+"</p>");
+                }
+        } else {
+            if (num>0) {
+        document.write("<p>"+"Los múltiplos de 3 comprendidos entre 1 y "+num+" son:"+"</p>");
+        let x=1;
+        while (x<=num) {
+        var res = x % 3;
+        if (res==0) {
+            document.write("<p>"+x+"</p>");
+        }
+        x=x+1;
+        
+    }
+    } else {
+        document.write("<p>"+"Los múltiplos de 3 comprendidos entre -1 y "+num+" son:"+"</p>");
+        let x=-1
+        while (x>=num) {
+        var res = x % 3;
+        if (res==0) {
+            document.write("<p>"+x+"</p>");
+        }
+        x=x-1;
+    }
+    }
+        }
+        }
+    }
+    }
+</script>
+<body>
+    Número=<input type="number" id="numId"><br>
+    <input type="button" value="Ver múltiplos de 3 entre 1 y el número" onclick="multiples()">
+</body>
+</html>
