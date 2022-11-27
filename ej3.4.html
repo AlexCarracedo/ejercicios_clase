@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function primcom() {
+        const div=document.getElementById("divId");
+        const div2=document.getElementById("div2Id");
+        var num=parseInt(document.getElementById("numId").value);
+        var sol=0
+        if (num<=1) {
+            div.innerHTML="<p> Los números primos y compuestos empiezan a contar a partir de 1, sin contarlo, por lo que "+num+" no es ni primo ni compuesto. </p>";
+        } else {
+            for (let x = 1; x <= num; x++) {
+                var res= num % x;
+                if (res==0) {
+                    sol=sol+1;
+                }
+        }
+        }
+        if (num<=1) {
+            div.innerHTML="<p> Los números primos y compuestos empiezan a contar a partir de 1, sin contarlo, por lo que "+num+" no es ni primo ni compuesto. </p>";
+            div2.innerHTML="<p></p>";
+        } else {
+            if (sol==2) {
+            div.innerHTML="<p> El número "+num+" es primo. </p>";
+        } else {
+            div.innerHTML="<p> El número "+num+" es compuesto. </p>";
+        }
+        }
+    }
+</script>
+<body>
+    Número: <input type="number" id="numId"><br>
+    <input type="button" value="Comprobar si es primo o compuesto" onclick="primcom()">
+    <div id="divId"></div>
+    <div id="div2Id"></div>
+</body>
+</html>
