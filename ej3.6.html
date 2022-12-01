@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function r() {
+
+        var num = parseInt(Math.random()*100);
+        var a = parseInt(document.getElementById("1Id").value);
+        var b = parseInt(document.getElementById("2Id").value);
+        var c = parseInt(document.getElementById("3Id").value);
+        if (a==num) {
+            alert("¡Enhorabuena! ¡Has adivinado el número correcto! El número era "+num);
+        } else {
+            if (b==num) {
+                alert("¡Enhorabuena! ¡Has adivinado el número correcto! El número era "+num);
+            } else {
+                if (c==num) {
+                    alert("¡Enhorabuena! ¡Has adivinado el número correcto! El número era "+num);
+                } else {
+                    alert("Lo sentimos, no has adivinado el número correcto. El número era "+num);
+                }
+            }
+        }
+    }
+</script>
+<body>
+    <h2>Tienes que adivinar un número comprendido entre 1 y 100. Tienes 3 intentos... ¿Serás capaz?</h2><br>
+    Intuición 1 <input type="number" id="1Id"><br>
+    Intuición 2 <input type="number" id="2Id"><br>
+    Intuición 3 <input type="number" id="3Id"><br>
+    <input type="button" value="Comprobar" onclick="r()">
+</body>
+</html>
