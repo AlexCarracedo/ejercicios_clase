@@ -8,31 +8,27 @@
 </head>
 <script>
     function r() {
-
         var num = parseInt(Math.random()*100);
-        var a = parseInt(document.getElementById("1Id").value);
-        var b = parseInt(document.getElementById("2Id").value);
-        var c = parseInt(document.getElementById("3Id").value);
+        var a = parseInt(prompt("Introduce una primera suposición:"));
         if (a==num) {
-            alert("¡Enhorabuena! ¡Has adivinado el número correcto! El número era "+num);
+            alert("¡Enhorabuena! ¡Has adivinado el número correcto! ¡En efecto, pensaba en el "+num+"!");
         } else {
+            var b = parseInt(prompt("El número "+a+" no era en el que estoy pensando, pero aún tienes otros dos intentos. Prueba con otro número:"));
             if (b==num) {
-                alert("¡Enhorabuena! ¡Has adivinado el número correcto! El número era "+num);
+                alert("¡Enhorabuena! ¡Has adivinado el número correcto! ¡En efecto, pensaba en el "+num+"!");
             } else {
+                var c = parseInt(prompt("No estoy pensando ni en el "+a+" ni en el número "+b+". Aún tienes un último intento. Prueba con otro número:"));
                 if (c==num) {
-                    alert("¡Enhorabuena! ¡Has adivinado el número correcto! El número era "+num);
+                    alert("¡Enhorabuena! ¡Has adivinado el número! ¡En efecto, pensaba en el "+num+"!");
                 } else {
-                    alert("Lo sentimos, no has adivinado el número correcto. El número era "+num);
+                    alert("Lo siento, no has adivinado el número correcto :(. El número en el que estaba pensando era "+num);
                 }
             }
         }
     }
 </script>
 <body>
-    <h2>Tienes que adivinar un número comprendido entre 1 y 100. Tienes 3 intentos... ¿Serás capaz?</h2><br>
-    Intuición 1 <input type="number" id="1Id"><br>
-    Intuición 2 <input type="number" id="2Id"><br>
-    Intuición 3 <input type="number" id="3Id"><br>
-    <input type="button" value="Comprobar" onclick="r()">
+    <h2>Tienes que adivinar un número entre 1 y 100 que yo voy a estar pensando. Tienes 3 intentos... ¿Serás capaz?</h2><br>
+    <input type="button" value="¡Empecemos!" onclick="r()">
 </body>
 </html>
